@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Carter+One&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {},
+            fontFamily: {
+              amatic: ["Amatic SC", "cursive"],
+              carter: ["Carter One", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Yusrin Birthday</title>
+  </head>
+  <body
+    class="min-h-[100vh] flex justify-center items-center bg-[url('https://images.alphacoders.com/286/286591.jpg')]"
+  >
+    <div
+      class="h-[95vh] lg:min-h-[95vh] w-[90vw] bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 border border-gray-100"
+    >
+      <!-- satu -->
+      <div
+        id="satu"
+        class="h-full w-full flex flex-col justify-center items-center"
+      >
+        <div class="w-full p-4">
+          <p class="text-center">
+            <span id="element1" class="font-amatic text-5xl mx-auto"></span>
+          </p>
+        </div>
+        <div>
+          <button
+            type="button"
+            onclick="playAudio()"
+            class="inline-block rounded-full border-2 border-success px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-success transition duration-150 ease-in-out hover:border-success-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-success-600 focus:border-success-600 focus:text-success-600 focus:outline-none focus:ring-0 active:border-success-700 active:text-success-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+            data-te-ripple-init
+          >
+            Click Here
+          </button>
+        </div>
+      </div>
+      <!-- dua -->
+      <div
+        id="dua"
+        style="display: none"
+        class="h-full w-full bg-cover bg-[url('./asset/bg1.png')] flex flex-col justify-center items-center"
+      >
+        <div class="w-full h-[100px] p-4">
+          <p class="text-center">
+            <span id="element2" class="font-amatic text-4xl mx-auto"></span>
+          </p>
+        </div>
+
+        <div class="mx-auto px-5 py-2">
+          <div class="-m-1 flex flex-wrap md:-m-2">
+            <div class="flex w-1/3 flex-wrap">
+              <div class="w-full h-[200px] p-1 md:p-2">
+                <img
+                  alt="gallery"
+                  class="block h-full w-full rounded-lg object-cover object-center"
+                  src="./asset/1.jpg"
+                />
+              </div>
+            </div>
+            <div class="flex w-1/3 flex-wrap">
+              <div class="w-full h-[200px] p-1 md:p-2">
+                <img
+                  alt="gallery"
+                  class="block h-full w-full rounded-lg object-cover object-center"
+                  src="./asset/2.jpg"
+                />
+              </div>
+            </div>
+            <div class="flex w-1/3 flex-wrap">
+              <div class="w-full h-[200px] p-1 md:p-2">
+                <img
+                  alt="gallery"
+                  class="block h-full w-full rounded-lg object-cover object-center"
+                  src="./asset/3.jpg"
+                />
+              </div>
+            </div>
+            <div class="flex w-1/3 flex-wrap">
+              <div class="w-full h-[200px] p-1 md:p-2">
+                <img
+                  alt="gallery"
+                  class="block h-full w-full rounded-lg object-cover object-center"
+                  src="./asset/4.jpg"
+                />
+              </div>
+            </div>
+            <div class="flex w-1/3 flex-wrap">
+              <div class="w-full h-[200px] p-1 md:p-2">
+                <img
+                  alt="gallery"
+                  class="block h-full w-full rounded-lg object-cover object-center"
+                  src="./asset/5.jpg"
+                />
+              </div>
+            </div>
+            <div class="flex w-1/3 flex-wrap">
+              <div class="w-full h-[200px] p-1 md:p-2">
+                <img
+                  alt="gallery"
+                  class="block h-full w-full rounded-lg object-cover object-center"
+                  src="./asset/6.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-center">
+          <span id="element3" class="font-carter text-sm mx-auto">
+            Semoga panjang umur, Sehat selalu <br />
+            dan <br />
+            menjadi pribadi yang dewasa
+          </span>
+        </p>
+      </div>
+    </div>
+    <div id="tsparticles"></div>
+    <audio id="myAudio" loop>
+      <source src="./song.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      var typed = new Typed("#element1", {
+        strings: [
+          "Hello Ucingkuu <br> I am Jothan Zodiathes <br> Happy Birthday to You",
+        ],
+        typeSpeed: 50,
+        loop: true,
+      });
+      var typed = new Typed("#element2", {
+        strings: ["Happy Birthday to You Ayaaaang"],
+        typeSpeed: 50,
+        loop: true,
+      });
+      var audio = document.getElementById("myAudio");
+      var div1 = document.getElementById("satu");
+      var div2 = document.getElementById("dua");
+      function playAudio() {
+        audio.play();
+
+        // div1.setAttribute("data-aos", "zoom-out");
+        setTimeout(function () {
+          div1.style.display = "none";
+          div2.style.display = "block";
+          //   div2.setAttribute("data-aos", "zoom-in");
+        }, 1500);
+      }
+    </script>
+  </body>
+</html>
